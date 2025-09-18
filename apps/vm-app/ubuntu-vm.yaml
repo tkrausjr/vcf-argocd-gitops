@@ -1,0 +1,32 @@
+apiVersion: vmoperator.vmware.com/v1alpha3
+kind: VirtualMachine
+metadata:
+  name: vcf-edge-sample-ubuntu-vm
+  namespace: argocd
+  labels:
+    vm-selector: vcf-edge-sample-ubuntu-vm
+    topology.kubernetes.io/zone: edge-zone-1
+spec:
+  className: best-effort-small
+  imageName: vmi-d093a76587d25f80b
+  storageClass: edge-site-1-storage-policy
+  powerState: PoweredOn
+  volumes:
+    - name: vcf-edge-sample-ubuntu-vm-pvc-0
+      persistentVolumeClaim:
+        claimName: vcf-edge-sample-ubuntu-vm-pvc-0
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: vcf-edge-sample-ubuntu-vm-pvc-0
+  namespace: argocd
+  labels:
+    vm-selector: vcf-edge-sample-ubuntu-vm
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 20Gi
+  storageClassName: edge-site-1-storage-policy

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: parent-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/dhruv-tyagi-broadcom/vcf-edge-argo-cd-sample-repo.git'
+    targetRevision: main
+    path: child-apps    
+    directory:
+      recurse: true   
+  destination:
+    server: 'https://10.3.8.201:443'
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: container-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/dhruv-tyagi-broadcom/vcf-edge-argo-cd-sample-repo.git'
+    targetRevision: main
+    path: apps/container-app
+    directory:
+      recurse: true
+  destination:
+    name: 'vks-01-admin@vks-01'
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

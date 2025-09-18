@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: container-app
-  namespace: argocd
+  namespace: test-nsx-vpc
 spec:
   project: default
   source:

@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: vm-app
-  namespace: argocd
+  namespace: test-nsx-vpc
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
       recurse: true
   destination:
     server: 'https://10.1.8.6:443'
-    namespace: argocd
+    namespace: test-nsx-vpc
   syncPolicy:
     automated:
       prune: true

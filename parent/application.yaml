@@ -2,19 +2,20 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: parent-app
-  namespace: argocd
+  namespace: test-nsx-vpc
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/tkrausjr/vcf-argocd-gitops.git'
+    repoURL: 'https://github.com/dhruv-tyagi-broadcom/vcf-edge-argo-cd-sample-repo.git'
     targetRevision: main
     path: child-apps    
     directory:
       recurse: true   
   destination:
     server: 'https://10.1.8.6:443'
-    namespace: argocd
+    namespace: test-nsx-vpc
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+      

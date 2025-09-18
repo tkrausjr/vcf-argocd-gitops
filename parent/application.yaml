@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true   
   destination:
-    server: 'https://10.3.8.201:443'
+    server: 'https://10.1.8.6:443'
     namespace: argocd
   syncPolicy:
     automated:

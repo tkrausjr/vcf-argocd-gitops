@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 'vks-01-admin@vks-01'
+    name: 'wkld01-demo'
     namespace: default
   syncPolicy:
     automated:

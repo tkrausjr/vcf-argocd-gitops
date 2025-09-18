@@ -1,15 +1,15 @@
 apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachine
 metadata:
-  name: vcf-edge-sample-ubuntu-vm
+  name: gitops-ubuntu-vm
   namespace: argocd
   labels:
-    vm-selector: vcf-edge-sample-ubuntu-vm
-    topology.kubernetes.io/zone: edge-zone-1
+    vm-selector: gitops-ubuntu-vm
+    topology.kubernetes.io/zone: domain-c10
 spec:
   className: best-effort-small
-  imageName: vmi-d093a76587d25f80b
-  storageClass: edge-site-1-storage-policy
+  imageName: vmi-1c67b2050f6f7f9e0
+  storageClass: vsan-default-storage-policy
   powerState: PoweredOn
   volumes:
     - name: vcf-edge-sample-ubuntu-vm-pvc-0
@@ -22,11 +22,11 @@ metadata:
   name: vcf-edge-sample-ubuntu-vm-pvc-0
   namespace: argocd
   labels:
-    vm-selector: vcf-edge-sample-ubuntu-vm
+    vm-selector: gitops-ubuntu-vm
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 20Gi
-  storageClassName: edge-site-1-storage-policy
+  storageClassName: vsan-default-storage-policy

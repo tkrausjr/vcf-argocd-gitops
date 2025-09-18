@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: web-app-multi
+  name: multi-tier-web
   namespace: test-nsx-vpc
 spec:
   project: default

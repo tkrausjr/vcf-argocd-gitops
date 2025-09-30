@@ -22,7 +22,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: nginx
-          image: harbor.mbentley.net/docker.io/bitnami/nginx:1.25
+          image: harbor.mbentley.net/docker.io/library/nginx:stable-perl
           ports:
             - containerPort: 8080
           securityContext:

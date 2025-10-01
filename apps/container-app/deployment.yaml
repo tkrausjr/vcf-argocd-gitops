@@ -17,7 +17,7 @@ spec:
       imagePullSecrets:
         - name: dockerhub-creds
       securityContext:
-        runAsNonRoot: true
+        runAsNonRoot: false
         seccompProfile:
           type: RuntimeDefault
       containers:
@@ -27,7 +27,7 @@ spec:
             - containerPort: 8080
           securityContext:
             allowPrivilegeEscalation: false
-            runAsNonRoot: true
+            runAsNonRoot: false
             capabilities:
               drop:
                 - ALL

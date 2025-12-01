@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: container-app
-  namespace: test-nsx-vpc
+  namespace: demo-93hwn
 spec:
   project: default
   source:
@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 'wkld01-demo'
+    name: 'k8s-134-4ao0'
     namespace: default
   syncPolicy:
     automated:

@@ -8,7 +8,7 @@ metadata:
     topology.kubernetes.io/zone: domain-c10
 spec:
   className: best-effort-small
-  imageName: vmi-1c67b2050f6f7f9e0
+  imageName: vmi-16bfda2e9a6d1f3f6
   storageClass: vsan-default-storage-policy
   powerState: PoweredOn
   volumes:

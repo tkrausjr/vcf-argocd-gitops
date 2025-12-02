@@ -1,0 +1,11 @@
+apiVersion: vmoperator.vmware.com/v1alpha3
+kind: VirtualMachine
+metadata:
+  name: test-vm-argocd
+spec:
+  className: best-effort-medium
+  imageName: vmi-16bfda2e9a6d1f3f6
+  storageClass: vsan-default-storage-policy
+  bootstrap:
+    cloudInit:
+      cloudConfig: {}

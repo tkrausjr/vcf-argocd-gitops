@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: multi-tier-web
-  namespace: demo-93hwn
+  namespace: testing123
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
       recurse: true   
   destination:
     server: 'https://10.1.8.6:443'
-    namespace: demo-93hwn
+    namespace: testing123
   syncPolicy:
     automated:
       prune: true

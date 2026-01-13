@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: container-app
-  namespace: demo-93hwn
+  namespace: testing123
 spec:
   project: default
   source:
@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 'k8s-134-4ao0'
+    name: 'vks-01'
     namespace: default
   syncPolicy:
     automated:

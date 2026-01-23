@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: container-app
-  namespace: testing123
+  namespace: demo-org-apps-kjl82
 spec:
   project: default
   source:
@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 'vks-01'
+    name: 'kubernetes-cluster-v32p-admin@kubernetes-cluster-v32p'
     namespace: default
   syncPolicy:
     automated:

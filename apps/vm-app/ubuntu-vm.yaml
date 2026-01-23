@@ -2,13 +2,13 @@ apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachine
 metadata:
   name: gitops-ubuntu-vm
-  namespace: testing123
+  namespace: demo-org-apps-kjl82
   labels:
     vm-selector: gitops-ubuntu-vm
     topology.kubernetes.io/zone: domain-c10
 spec:
   className: best-effort-small
-  imageName: vmi-0789eef444d057340
+  imageName: vmi-f0e634cb6faede95e
   storageClass: vsan-default-storage-policy
   powerState: PoweredOn
   volumes:
@@ -20,7 +20,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: vcf-edge-sample-ubuntu-vm-pvc-0
-  namespace: testing123
+  namespace: demo-org-apps-kjl82
   labels:
     vm-selector: gitops-ubuntu-vm
 spec:

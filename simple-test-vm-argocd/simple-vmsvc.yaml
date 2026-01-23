@@ -4,7 +4,7 @@ metadata:
   name: test-vm-argocd
 spec:
   className: best-effort-medium
-  imageName: vmi-16bfda2e9a6d1f3f6
+  imageName: vmi-f0e634cb6faede95e
   storageClass: vsan-default-storage-policy
   bootstrap:
     cloudInit:

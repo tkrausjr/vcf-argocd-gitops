@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: multi-tier-web
-  namespace: testing123
+  namespace: demo-org-apps-kjl82
 spec:
   project: default
   source:
@@ -12,8 +12,8 @@ spec:
     directory:
       recurse: true   
   destination:
-    server: 'https://10.1.8.6:443'
-    namespace: testing123
+    server: 'https://10.1.0.6:443'
+    namespace: demo-org-apps-kjl82
   syncPolicy:
     automated:
       prune: true

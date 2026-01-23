@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: nginx
+    type: argocd
   ports:
     - protocol: TCP
       port: 8084

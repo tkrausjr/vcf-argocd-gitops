@@ -5,7 +5,7 @@ metadata:
   namespace: test-ns01
   labels:
     vm-selector: gitops-ubuntu-vm
-    topology.kubernetes.io/zone: domain-c10
+    topology.kubernetes.io/zone: z-wld-a  # In vSphere NAmespace kubectl get zone
 spec:
   className: best-effort-small
   imageName: vmi-0789eef444d057340

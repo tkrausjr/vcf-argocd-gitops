@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: 'https://github.com/tkrausjr/vcf-argocd-gitops.git'
     targetRevision: main
-    path: apps/container-app
+    path: multi-tier/apps/container-app
     directory:
       recurse: true
   destination:

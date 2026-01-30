@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pod-tier-nginx
-  namespace: test-ns01
+  namespace: shared-svcs
 spec:
   project: default
   source:

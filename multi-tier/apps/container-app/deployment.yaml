@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: two-tier-pod-nginx
   labels:
-    app: nginx
+    app: two-tier-pod-nginx
     type: argocd
 spec:
   replicas: 2

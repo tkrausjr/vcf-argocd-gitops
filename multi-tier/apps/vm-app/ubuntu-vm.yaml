@@ -1,10 +1,10 @@
 apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachine
 metadata:
-  name: gitops-ubuntu-vm
+  name: two-tier-vm-mysql
   namespace: test-ns01
   labels:
-    vm-selector: gitops-ubuntu-vm
+    vm-selector: two-tier-vm-mysql
     topology.kubernetes.io/zone: z-wld-a  # In vSphere NAmespace kubectl get zone
 spec:
   className: best-effort-small
@@ -22,7 +22,7 @@ metadata:
   name: vcf-edge-sample-ubuntu-vm-pvc-0
   namespace: test-ns01
   labels:
-    vm-selector: gitops-ubuntu-vm
+    vm-selector: two-tier-vm-mysql
 spec:
   accessModes:
     - ReadWriteOnce

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: multi-tier-web
+  name: two-tier-app
   namespace: shared-svcs
 spec:
   project: default

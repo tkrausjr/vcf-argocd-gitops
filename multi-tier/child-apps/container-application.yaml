@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: container-app
+  name: pod-tier-nginx
   namespace: shared-svcs
 spec:
   project: default

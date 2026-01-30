@@ -4,7 +4,7 @@ metadata:
   name: nginx-service
 spec:
   selector:
-    app: nginx
+    app: two-tier-pod-nginx
     type: argocd
   ports:
     - protocol: TCP

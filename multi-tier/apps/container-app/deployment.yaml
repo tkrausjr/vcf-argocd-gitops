@@ -14,6 +14,7 @@ spec:
     metadata:
       labels:
         app: two-tier-pod-nginx
+        type: argocd
     spec:
       imagePullSecrets:
         - name: dockerhub-creds

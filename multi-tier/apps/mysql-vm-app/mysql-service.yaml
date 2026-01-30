@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachineService
 metadata:
-  name: new-vm-lb-h2gg
+  name: vm-mysql-svc
   namespace: test-ns01
 spec:
   selector:

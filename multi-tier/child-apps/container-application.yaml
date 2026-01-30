@@ -12,8 +12,8 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 10.1.0.6
-    namespace: shared-svcs
+    name: 'https://10.1.0.8:6443'
+    namespace: default
   syncPolicy:
     automated:
       prune: true

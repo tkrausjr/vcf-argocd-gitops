@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: vm-tier-mysql
-  namespace: shared-svcs
+  namespace: test-ns01
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
       recurse: true
   destination:
     server: 'https://10.1.0.6:443'
-    namespace: shared-svcs
+    namespace: test-ns01
   syncPolicy:
     automated:
       prune: true

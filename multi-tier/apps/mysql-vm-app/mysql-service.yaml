@@ -1,0 +1,18 @@
+apiVersion: vmoperator.vmware.com/v1alpha3
+kind: VirtualMachineService
+metadata:
+  name: new-vm-lb-h2gg
+  namespace: test-ns01
+spec:
+  selector:
+    vm-selector: two-tier-vm-mysql
+  type: LoadBalancer
+  ports:
+    - name: ssh
+      protocol: TCP
+      port: 22
+      targetPort: 22
+    - name: sql
+      protocol: TCP
+      port: 3306
+      targetPort: 3306

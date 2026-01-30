@@ -1,0 +1,21 @@
+apiVersion: vmoperator.vmware.com/v1alpha3
+kind: VirtualMachine
+metadata:
+  name: two-tier-vm-mysql
+  namespace: test-ns01
+  labels:
+    vm-selector: two-tier-vm-mysql
+spec:
+  className: best-effort-medium
+  # Friendly image name: noble-server-cloudimg-amd64
+  imageName: vmi-0789eef444d057340
+  storageClass: nfs-datastore-policy
+  powerState: PoweredOn
+  network:
+    hostName: two-tier-vm-mysql
+    domainName: vcf.lab
+  bootstrap:
+    cloudInit:
+      rawCloudConfig:
+        name: two-tier-vm-mysql-cloudinit-bootstrap-secret
+        key: user-data

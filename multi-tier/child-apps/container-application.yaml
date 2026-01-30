@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 'https://10.1.0.8:6443'
+    name: vks-01
     namespace: default
   syncPolicy:
     automated:

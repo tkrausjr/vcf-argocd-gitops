@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: vm-app
-  namespace: demo-org-apps-kjl82
+  namespace: test-ns01
 spec:
   project: default
   source:
@@ -12,8 +12,8 @@ spec:
     directory:
       recurse: true
   destination:
-    server: 'https://10.1.0.6:443'
-    namespace: demo-org-apps-kjl82
+    server: 'vks-01'
+    namespace: test-ns01
   syncPolicy:
     automated:
       prune: true

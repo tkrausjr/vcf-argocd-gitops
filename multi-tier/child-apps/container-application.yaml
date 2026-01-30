@@ -12,8 +12,8 @@ spec:
     directory:
       recurse: true
   destination:
-    name: 10.1.0.6
-    namespace: test-ns01
+    name: vks-01
+    namespace: default
   syncPolicy:
     automated:
       prune: true

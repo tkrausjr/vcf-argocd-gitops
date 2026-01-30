@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: two-tier-nginx-svc
 spec:
   selector:
     app: two-tier-pod-nginx

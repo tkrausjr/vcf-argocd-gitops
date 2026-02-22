@@ -1,0 +1,19 @@
+# argocd-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-conference-app-argocd-cli
+  namespace: shared-svcs # Argo CD application resources usually live in the argocd namespace
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/tkrausjr/vks.git # Replace with your repo URL
+    targetRevision: HEAD # Branch or commit SHA (e.g., HEAD, main, or a specific tag)
+    path: applications/conference/ # The directory path within your repo containing K8s YAMLs
+  destination:
+    server: https://10.1.0.8:6443 # The internal K8s API server URL
+    namespace: default # The target namespace where your app will be deployed
+  syncPolicy:
+    automated:
+      prune: true # Allows Argo CD to delete resources that are no longer in Git
+      selfHeal: true # Automatically syncs if the cluster state deviates from Git

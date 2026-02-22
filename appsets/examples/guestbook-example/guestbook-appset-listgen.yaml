@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1 
+kind: ApplicationSet
+metadata:
+  name: guestbook-appset-listgen
+  namespace: shared-svcs
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - list: 
+      # The template below uses these parameters
+      elements: 
+      - cluster: development
+        url: https://10.1.0.6:443
+      - cluster: production
+        url: https://10.1.0.8:6443
+  template: 
+    # inserts cluster and url values from parameters defined above
+    metadata:
+      name: '{{cluster}}-guestbook'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/infra-team/cluster-deployments.git
+        targetRevision: HEAD
+        path: guestbook/{{.cluster}}
+      destination:
+        server: '{{.url}}'
+        namespace: guestbook
+      syncPolicy:
+        automated:
+          enabled: true          
+          selfHeal: true

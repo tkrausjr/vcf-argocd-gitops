@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: vks-02-cluster
+  namespace: shared-svcs 
+spec:
+  project:
+  source:
+    repoURL: https://github.com/tkrausjr/vcf-argocd-gitops.git
+    path: vks-cluster/k8s
+    targetRevision: HEAD
+  destination:
+    server: https://10.1.0.6:443
+    namespace: test-ns02
+  syncPolicy:
+   automated: {}

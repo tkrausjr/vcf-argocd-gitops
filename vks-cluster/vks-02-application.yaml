@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: vks-02-cluster
+  name: vks-02-cluster-test-ns01
   namespace: shared-svcs 
 spec:
   project:
@@ -11,6 +11,6 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://10.1.0.6:443
-    namespace: test-ns02
+    namespace: test-ns01
   syncPolicy:
    automated: {}

@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: guestbook-appset-listgen
-  namespace: shared-svcs
 spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
@@ -10,10 +9,10 @@ spec:
   - list: 
       # The template below uses these parameters
       elements: 
-      - cluster: development
-        url: https://10.1.0.6:443
-      - cluster: production
-        url: https://10.1.0.8:6443
+      - cluster: vks-04-gitops
+        url: https://10.1.11.4:6443
+      - cluster: vks-01-gitops
+        url: https://10.1.11.2:6443
   template: 
     # inserts cluster and url values from parameters defined above
     metadata:

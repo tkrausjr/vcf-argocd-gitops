@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: vm-tier-mysql
-  namespace: shared-svcs
+  namespace: shared-svcs-bxrwh
 spec:
   project: default
   source:

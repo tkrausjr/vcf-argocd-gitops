@@ -8,7 +8,7 @@ metadata:
 spec:
   className: best-effort-medium
   # Friendly image name: noble-server-cloudimg-amd64
-  imageName: vmi-0789eef444d057340
+  imageName: vmi-c3fe3545fe5f0027f
   storageClass: vsan-default-storage-policy
   powerState: PoweredOn
   network:

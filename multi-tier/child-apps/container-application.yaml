@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: pod-tier-nginx
-  namespace: shared-svcs-bxrwh
+  namespace: shared-svcs-hycxp
 spec:
   project: default
   source:

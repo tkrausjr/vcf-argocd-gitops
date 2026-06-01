@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: vm-tier-mysql
-  namespace: shared-svcs-bxrwh
+  namespace: shared-svcs-hycxp
 spec:
   project: default
   source:
@@ -13,7 +13,7 @@ spec:
       recurse: true
   destination:
     server: 'https://kubernetes.default.svc.cluster.local:443'
-    namespace: shared-svcs-bxrwh
+    namespace: shared-svcs-hycxp
   syncPolicy:
     automated:
       prune: true

@@ -1,0 +1,29 @@
+apiVersion: cluster.x-k8s.io/v1beta2
+kind: Cluster
+metadata:
+  name: cl03-argocd-mods
+  namespace: lab-kg5d5
+spec:
+  clusterNetwork:
+    pods:
+      cidrBlocks:
+        - 192.168.156.0/20
+    services:
+      cidrBlocks:
+        - 10.96.0.0/12
+    serviceDomain: cluster.local
+  topology:
+    classRef:
+      name: builtin-generic-v3.6.0
+      namespace: vmware-system-vks-public
+    version: v1.33.6---vmware.1-fips-vkr.2
+    variables:
+      - name: vmClass
+        value: best-effort-medium
+      - name: storageClass
+        value: vsan-default-storage-policy
+    controlPlane:
+      replicas: 1
+      metadata:
+        annotations:
+          run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-e80e0171710ad97e3

@@ -2,13 +2,13 @@ apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachine
 metadata:
   name: two-tier-vm-mysql
-  namespace: shared-svcs-hycxp
+  namespace: shared-svcs-23vh7
   labels:
     vm-selector: two-tier-vm-mysql
 spec:
   className: best-effort-medium
   # Friendly image name: noble-server-cloudimg-amd64
-  imageName: vmi-9c6e12a09bb0e56c6
+  imageName: vmi-ff818245b77128f5a
   storageClass: vsan-default-storage-policy
   powerState: PoweredOn
   network:

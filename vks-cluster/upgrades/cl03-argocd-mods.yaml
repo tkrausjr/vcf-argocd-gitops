@@ -26,3 +26,11 @@ spec:
       metadata:
         annotations:
           run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-e80e0171710ad97e3
+        workers:
+    machineDeployments:
+      - class: node-pool
+        name: kubernetes-cluster-y8gr-np-234b
+        replicas: 1
+        metadata:
+          annotations:
+            run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-e80e0171710ad97e3

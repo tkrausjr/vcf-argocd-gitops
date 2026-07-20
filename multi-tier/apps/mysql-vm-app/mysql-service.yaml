@@ -2,7 +2,7 @@ apiVersion: vmoperator.vmware.com/v1alpha3
 kind: VirtualMachineService
 metadata:
   name: vm-mysql-svc
-  namespace: shared-svcs-23vh7
+#namespace: shared-svcs-23vh7
 spec:
   selector:
     vm-selector: two-tier-vm-mysql

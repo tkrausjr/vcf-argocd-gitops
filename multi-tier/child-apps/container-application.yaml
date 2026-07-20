@@ -12,7 +12,7 @@ spec:
     directory:
       recurse: true
   destination:
-    name: vcf-cli-demo-cl01-shared-svcs-23vh7@demo-cl01-shared-svcs-23vh7
+    name: vcf-cli-demo-cl01-shared-svcs-hgybt@demo-cl01-shared-svcs-hgybt
     namespace: default
   syncPolicy:
     automated:

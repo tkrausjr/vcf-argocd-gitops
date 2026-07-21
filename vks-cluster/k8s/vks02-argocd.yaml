@@ -12,8 +12,8 @@ spec:
         - 10.96.0.0/12
     serviceDomain: cluster.local
   topology:
-    class: builtin-generic-v3.5.0
-    version: v1.33.3---vmware.1-fips-vkr.1
+    class: builtin-generic-v3.7.0
+    version: v1.36.1---vmware.4-vkr.5
     variables:
       - name: kubernetes
         value:
@@ -21,7 +21,7 @@ spec:
             enabled: true
             renewalDaysBeforeExpiry: 90
       - name: vmClass
-        value: best-effort-small
+        value: best-effort-medium
       - name: storageClass
         value: vsan-default-storage-policy
     controlPlane:
@@ -30,5 +30,5 @@ spec:
       machineDeployments:
         - class: node-pool
           name: vsan-default-storage-policy
-          replicas: 2
+          replicas: 1
       

@@ -30,5 +30,5 @@ spec:
       machineDeployments:
         - class: node-pool
           name: vsan-default-storage-policy
-          replicas: 1
+          replicas: 2
       

@@ -30,7 +30,7 @@ spec:
     workers:
       machineDeployments:
         - class: node-pool
-          name: demo-cl02-np-2vpg
+          name: demo-cl02-argocd-np-kz46
           replicas: 1
           metadata:
             annotations:

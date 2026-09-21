@@ -1,8 +1,10 @@
 apiVersion: cluster.x-k8s.io/v1beta2
 kind: Cluster
 metadata:
-  name: demo-cl02-argocd
-  namespace: shared-svcs-hgybt
+  name: cluster-01c-argocd
+  namespace: demo-01
+  labels:
+    sealID: 1467933j
 spec:
   clusterNetwork:
     pods:
@@ -24,14 +26,9 @@ spec:
         value: vsan-default-storage-policy
     controlPlane:
       replicas: 1
-      metadata:
-        annotations:
-          run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-e80e0171710ad97e3
     workers:
       machineDeployments:
         - class: node-pool
           name: demo-cl02-argocd-np-kz46
           replicas: 1
-          metadata:
-            annotations:
-              run.tanzu.vmware.com/resolve-os-image: os-name=photon, content-library=cl-e80e0171710ad97e3
+        

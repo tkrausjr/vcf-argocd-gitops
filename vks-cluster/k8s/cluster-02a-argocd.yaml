@@ -4,7 +4,7 @@ metadata:
   name: cluster-02a-argocd
   namespace: demo-02
   labels:
-    sealID: 1467933j
+    sealID: jh875h
 spec:
   clusterNetwork:
     pods:

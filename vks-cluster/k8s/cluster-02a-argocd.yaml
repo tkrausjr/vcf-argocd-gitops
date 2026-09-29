@@ -1,8 +1,8 @@
 apiVersion: cluster.x-k8s.io/v1beta2
 kind: Cluster
 metadata:
-  name: cluster-01c-argocd
-  namespace: demo-01
+  name: cluster-02a-argocd
+  namespace: demo-02
   labels:
     sealID: 1467933j
 spec:

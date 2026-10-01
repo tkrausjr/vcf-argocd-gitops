@@ -30,5 +30,5 @@ spec:
       machineDeployments:
         - class: node-pool
           name: demo-cl02-argocd-np-kz46
-          replicas: 1
+          replicas: 3
         
